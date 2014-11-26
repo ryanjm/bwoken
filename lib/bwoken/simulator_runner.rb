@@ -54,11 +54,13 @@ module Bwoken
     end
 
     def all_files_in_test_dir
-      Dir["#{Bwoken.test_suite_path}/#{device_family}/**/*.js"]
+      Dir["#{Bwoken.test_suite_path}/#{device_family}/**/*.js"] +
+      Dir["#{Bwoken.test_suite_path}/universal/**/*.js"]
     end
 
     def helper_files
-      Dir["#{Bwoken.test_suite_path}/#{device_family}/**/helpers/**/*.js"]
+      Dir["#{Bwoken.test_suite_path}/#{device_family}/**/helpers/**/*.js"] +
+      Dir["#{Bwoken.test_suite_path}/universal/**/helpers/**/*.js"]
     end
 
   end

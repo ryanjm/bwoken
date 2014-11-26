@@ -45,6 +45,7 @@ module Bwoken
     def test_files_from_feature_names
       feature_names.map do |feature_name|
         File.join(Bwoken.test_suite_path, device_family, "#{feature_name}.js")
+        # TODO: Also join in universal
       end
     end
 
@@ -53,11 +54,13 @@ module Bwoken
     end
 
     def all_files_in_test_dir
-      Dir["#{Bwoken.test_suite_path}/#{device_family}/**/*.js"]
+      Dir["#{Bwoken.test_suite_path}/#{device_family}/**/*.js"] +
+      Dir["#{Bwoken.test_suite_path}/universal/**/*.js"]
     end
 
     def helper_files
-      Dir["#{Bwoken.test_suite_path}/#{device_family}/**/helpers/**/*.js"]
+      Dir["#{Bwoken.test_suite_path}/#{device_family}/**/helpers/**/*.js"] +
+      Dir["#{Bwoken.test_suite_path}/universal/**/helpers/**/*.js"]
     end
 
   end

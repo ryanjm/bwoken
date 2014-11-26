@@ -27,6 +27,7 @@ To add new coffeescript test, add those file to the /integration/coffeescript/ip
 To add new javascript test, if the iphone and ipad folder don't exist in the /integration/javascript forlder, create them. 
 Then copy your test file inside those folder depending on your target.
 Your file hierarchy should look something like this
+
 <pre><code>
 | integration
 	| coffeescript
@@ -34,11 +35,13 @@ Your file hierarchy should look something like this
 			| exemple.coffee
 		| ipad
 			| example.coffee
+    | universal
 	| javascript
 		| iphone
 			| myTest.js
 		| ipad
 			| myiPadtest.js
+    | universal
 	|tmp
 </code></pre>
 

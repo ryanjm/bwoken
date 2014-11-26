@@ -28,7 +28,10 @@ BANNER
       def run
         directory "coffeescript/iphone"
         directory "coffeescript/ipad"
-        directory "javascript"
+        directory "coffeescript/universal"
+        directory "javascript/iphone"
+        directory "javascript/ipad"
+        directory "javascript/universal"
         directory "tmp/results"
         template "coffeescript/iphone/example.coffee"
         template "coffeescript/ipad/example.coffee"
