@@ -48,7 +48,7 @@ module Bwoken
       if !device.nil?
         return "-w \"#{device}\""
       end
-      
+
       simulator ? '' : "-w #{Bwoken::Device.uuid}"
     end
 

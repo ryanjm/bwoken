@@ -43,9 +43,10 @@ module Bwoken
     end
 
     def test_files_from_feature_names
-      feature_names.map do |feature_name|
-        File.join(Bwoken.test_suite_path, device_family, "#{feature_name}.js")
-        # TODO: Also join in universal
+      all_test_files.select do |file_name|
+        feature_names.any? do |feature_name|
+          file_name.include?(feature_name)
+        end
       end
     end
 
